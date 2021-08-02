@@ -22,4 +22,9 @@ reset
 reset -s
 ```
 
-- PowerShell ISE kann mit 'ise' oder 'ise.exe' gestartet werden
+- PowerShell ISE kann mit 'ise' oder 'ise.exe' gestartet werden.
+
+```powershell
+ise
+ise Get-DsmCompliance.ps1
+```
