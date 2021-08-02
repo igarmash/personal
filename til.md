@@ -7,3 +7,17 @@
 ## 17.07.2021
 
 > Windows Terminal kann mit 'wt' oder 'wt.exe' gestartet werden.
+
+## 02.08.2021
+
+> IMM Power Control lässt sich auch via ssh ansteuern:
+> 
+```powershell
+power state
+power on
+power cycle
+power off
+
+reset
+reset -s
+```
