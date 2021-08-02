@@ -10,7 +10,7 @@
 
 ## 02.08.2021
 
-> IMM Power Control lässt sich auch via ssh ansteuern:
+> IMM Power Control lässt sich auch per ssh ansteuern:
 > 
 ```powershell
 power state
