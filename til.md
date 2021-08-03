@@ -28,3 +28,12 @@ reset -s
 ise
 ise Get-DsmCompliance.ps1
 ```
+
+## 03.08.2021
+
+- Aliases um PS Module zu import-/exportieren
+
+```powershell
+ipmo POSFlagFile
+rmo POSFlagFile
+```
