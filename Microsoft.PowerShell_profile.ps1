@@ -37,40 +37,6 @@ function Get-ShutdownEvents ($Hostname)
 
 function touch {set-content -Path ($args[0]) -Value ($null)}
 
-# ToDo: Header
-function Update-JavaExceptionSites()
-{
-    # Variablen
-    [String] $adSearchBase = 'OU=SH,OU=Store,OU=Computers,OU=MGB,DC=pop,DC=migros,DC=ch'
-    [String] $exceptionSitesDir = "$env:USERPROFILE\AppData\LocalLow\Sun\Java\Deployment\security" 
-    [String] $exceptionSitesPath = "$exceptionSitesDir\exception.sites"
-
-    # Alle SH abfragen
-    $storehubArray = @()
-    $storehubArray = Get-AdComputer -Filter * -SearchBase $adSearchBase
-
-    [String] $outputString = ""
-
-    # Output String generieren
-    foreach ($sh in $storehubArray)
-    {
-
-        [String] $outputString += "https://rsa-$($sh.Name):443`n"
-
-    }
-
-    # Exception Site Verzeichnisstruktur anlegen, falls nicht vorhanden
-    if (!(Test-Path -Path $exceptionSitesDir))
-    {
-
-        New-Item -ItemType Directory -Force -Path $exceptionSitesDir | Out-Null
-
-    }
-
-    # $env:USERPROFILE\AppData\LocalLow\Sun\Java\Deployment\security\exception.sites Ã¼berschreiben
-    $outputString | Out-File -FilePath $exceptionSitesPath -Encoding ascii
-}
-
 function Get-DsmCompliance
 {
 
