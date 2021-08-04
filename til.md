@@ -37,3 +37,11 @@ ise Get-DsmCompliance.ps1
 ipmo POSFlagFile
 rmo POSFlagFile
 ```
+
+## 04.08.2021
+
+- Gelöschte AD Objekte lassen sich ganz einfach mit PS abfragen
+
+```powershell
+Get-ADObject -filter 'isDeleted -eq $true -and name -ne "Deleted Objects"' -includeDeletedObjects
+```
