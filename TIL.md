@@ -45,3 +45,11 @@ rmo POSFlagFile
 ```powershell
 Get-ADObject -filter 'isDeleted -eq $true -and name -ne "Deleted Objects"' -includeDeletedObjects
 ```
+
+## 07.08.2021
+
+- Ein Zufallsnamen für eine Datei generieren
+
+```powershell
+[System.IO.Path]::GetRandomFileName()
+```
