@@ -57,3 +57,15 @@ Get-ADObject -filter 'isDeleted -eq $true -and name -ne "Deleted Objects"' -incl
 ## 10.08.2021
 
 - Immer davon ausgehen dass defekte HW für einen Austausch verwendet wird. (MP VOI Rombach - Mainboard defekt)
+
+## 12.08.2021
+
+https://www.codewars.com/kata/525f50e3b73515a6db000b83/powershell
+https://renenyffenegger.ch/notes/Windows/PowerShell/language/operator/f/index
+
+```powershell
+function New-PhoneNumber([int[]]$numbers)
+{
+  return '({0}{1}{2}) {3}{4}{5}-{6}{7}{8}{9}' -f @($numbers)
+}
+```
