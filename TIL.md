@@ -56,4 +56,4 @@ Get-ADObject -filter 'isDeleted -eq $true -and name -ne "Deleted Objects"' -incl
 
 ## 10.08.2021
 
-- Immer davon ausgehen dass defekte HW für einen Austausch verwendet wird. (MP VOI Rombach)
+- Immer davon ausgehen dass defekte HW für einen Austausch verwendet wird. (MP VOI Rombach - Mainboard defekt)
