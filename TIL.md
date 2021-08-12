@@ -61,6 +61,7 @@ Get-ADObject -filter 'isDeleted -eq $true -and name -ne "Deleted Objects"' -incl
 ## 12.08.2021
 
 [Create Phone Number](https://www.codewars.com/kata/525f50e3b73515a6db000b83/powershell)
+<br>
 [PowerShell: -f operator](https://renenyffenegger.ch/notes/Windows/PowerShell/language/operator/f/index)
 
 ```powershell
