@@ -70,3 +70,21 @@ function New-PhoneNumber([int[]]$numbers)
   return '({0}{1}{2}) {3}{4}{5}-{6}{7}{8}{9}' -f @($numbers)
 }
 ```
+## 16.08.2021
+
+- PS Parameter unterstützen auch mehrere Aliases
+
+[Stackoverflow](https://stackoverflow.com/questions/51071800/declaring-multiple-aliases-in-an-advanced-powershell-function)
+
+```powershell
+[Alias("one","two","three)]
+[Alias("one")][Alias("two")][Alias("three")]
+```
+
+## 17.08.2021
+
+- Modul Pfad abfragen
+
+```powershell
+$env:PSModulePath -Split ';'
+```
