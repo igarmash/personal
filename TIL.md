@@ -88,3 +88,16 @@ function New-PhoneNumber([int[]]$numbers)
 ```powershell
 $env:PSModulePath -Split ';'
 ```
+
+## 28.08.2021
+
+- Der performanteste Weg den Dateiinhlat einzulesen
+
+[Stackoverflow](https://stackoverflow.com/questions/33511772/read-file-line-by-line-in-powershell)
+
+```powershell
+foreach ($line in [System.IO.File]::ReadLines($StoreListPath ))
+{
+
+}
+```
