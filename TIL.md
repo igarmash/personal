@@ -101,3 +101,17 @@ foreach ($line in [System.IO.File]::ReadLines($StoreListPath ))
 
 }
 ```
+
+## 01.10.2021
+
+- WSUS Content verschieben und neu herunterladen
+
+```powershell
+Stop-Service WSUSService -Force
+Stop-WebAppPool -Name 'WsusPool'
+sl 'C:\Program Files\Update Services\Tools'
+.\WsusUtil.exe E:\WSUS\ E:\WSUS\movecontent.log -skipcopy
+.\WsusUtil.exe reset
+Start-Service WSUSService
+Start-WebAppPool -Name 'WsusPool'
+```
