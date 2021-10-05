@@ -115,3 +115,13 @@ sl 'C:\Program Files\Update Services\Tools'
 Start-Service WSUSService
 Start-WebAppPool -Name 'WsusPool'
 ```
+
+## 05.10.2021
+
+- ESD WIM Format
+
+https://oofhours.com/2021/08/04/make-windows-images-smaller-easily/
+
+```powershell
+dism /export-image /SourceImageFile:".\Win10LTSC1809-v8.9.0.wim" /SourceIndex:1 /destinationimagefile:"win10ltsc1809-v8.9.0.esd.wim" /compress:recovery
+```
