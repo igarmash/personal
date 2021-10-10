@@ -128,8 +128,6 @@ dism /export-image /SourceImageFile:".\Win10LTSC1809-v8.9.0.wim" /SourceIndex:1 
 
 ## 10.10.2021
 
-- Ausführung ohne Adminrechte verhindern
+- OSDBuilder
 
-```
-Block-StandardUser
-```
+https://osdbuilder.osdeploy.com/docs/basics/get-osdbuilder
