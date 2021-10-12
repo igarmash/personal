@@ -131,3 +131,13 @@ dism /export-image /SourceImageFile:".\Win10LTSC1809-v8.9.0.wim" /SourceIndex:1 
 - OSDBuilder
 
 https://osdbuilder.osdeploy.com/docs/basics/get-osdbuilder
+
+## 12.10.2021
+
+- WIMWitch
+
+https://msendpointmgr.com/2019/10/04/wim-witch-a-gui-driven-solution-for-image-customization/
+
+- Microsoft Patch Tuesday erst um 18:00 GMT+1
+
+> Der Patch Tuesday bei Microsoft beginnt in der Regel um 10:00 Pacific Time (Los Angeles), dies entspricht 19:00 MEZ (kann abweichen wegen unterschiedlicher Umstellung Sommer-/Winterzeit). 
