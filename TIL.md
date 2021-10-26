@@ -141,3 +141,11 @@ https://msendpointmgr.com/2019/10/04/wim-witch-a-gui-driven-solution-for-image-c
 - Microsoft Patch Tuesday erst um 18:00 GMT+1
 
 > Der Patch Tuesday bei Microsoft beginnt in der Regel um 10:00 Pacific Time (Los Angeles), dies entspricht 19:00 MEZ (kann abweichen wegen unterschiedlicher Umstellung Sommer-/Winterzeit). 
+
+## 22.10.2021
+
+- Windows Logs von einem bestimmten Zeitfenster abfragen
+
+```powershell
+Get-WinEvent -ListLog * | % {Get-WinEvent -FilterHashTable @{LogName=$_.LogName;StartTime="22-10-2021 09:18:25";EndTime="22-10-2021 09:18:45"} -ea 0} | sort timecreated -Descending | fl *
+```
