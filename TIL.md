@@ -152,7 +152,7 @@ Get-WinEvent -ListLog * | % {Get-WinEvent -FilterHashTable @{LogName=$_.LogName;
 
 ## 27.10.2021
 
-- Windows 10 Build und UBR abfragen
+- Windows 10 Build und UBR (Updated Build Revision) abfragen 
 
 [Source](https://stackoverflow.com/questions/57194033/how-to-get-os-build-number-in-windows-10-1809-iso-using-powershell)
 
