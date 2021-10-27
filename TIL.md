@@ -149,3 +149,23 @@ https://msendpointmgr.com/2019/10/04/wim-witch-a-gui-driven-solution-for-image-c
 ```powershell
 Get-WinEvent -ListLog * | % {Get-WinEvent -FilterHashTable @{LogName=$_.LogName;StartTime="22-10-2021 09:18:25";EndTime="22-10-2021 09:18:45"} -ea 0} | sort timecreated -Descending | fl *
 ```
+
+## 27.10.2021
+
+- Windows 10 Build und UBR abfragen
+
+[Source]()
+
+```powershell
+# OS Build
+(get-wmiobject -Class win32_OperatingSystem).BuildNumber
+(Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion' -Name CurrentBuild).CurrentBuild
+[system.environment]::osversion.version.build
+
+# UBR
+(Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion' -Name UBR).UBR
+
+# DISM
+(get-windowsimage -imagepath .\Win10LTSC1809-v8.9.0.esd.wim -Index 1).Build
+(get-windowsimage -imagepath .\Win10LTSC1809-v8.9.0.esd.wim -Index 1).SPBuild
+```
