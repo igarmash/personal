@@ -154,7 +154,7 @@ Get-WinEvent -ListLog * | % {Get-WinEvent -FilterHashTable @{LogName=$_.LogName;
 
 - Windows 10 Build und UBR abfragen
 
-[Source]()
+[Source](https://stackoverflow.com/questions/57194033/how-to-get-os-build-number-in-windows-10-1809-iso-using-powershell)
 
 ```powershell
 # OS Build
