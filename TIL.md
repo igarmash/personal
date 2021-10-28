@@ -169,3 +169,12 @@ Get-WinEvent -ListLog * | % {Get-WinEvent -FilterHashTable @{LogName=$_.LogName;
 (get-windowsimage -imagepath .\Win10LTSC1809-v8.9.0.esd.wim -Index 1).Build
 (get-windowsimage -imagepath .\Win10LTSC1809-v8.9.0.esd.wim -Index 1).SPBuild
 ```
+
+# 28.10.2021
+
+Archive Security Logs abfragen
+
+```powershell
+$WinEventLogPath = 'C:\Windows\System32\winevt\Logs'
+gci -Path $WinEventLogPath | ? { ($_.Name -match 'Archive-Security-*') -and ($_.LastWriteTime -lt (Get-Date).AddMonths(-6)) }
+```
