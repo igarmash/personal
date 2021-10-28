@@ -178,3 +178,12 @@ Archive Security Logs abfragen
 $WinEventLogPath = 'C:\Windows\System32\winevt\Logs'
 gci -Path $WinEventLogPath | ? { ($_.Name -match 'Archive-Security-*') -and ($_.LastWriteTime -lt (Get-Date).AddMonths(-6)) }
 ```
+
+String als Datetime parsen
+
+> Since it is a 24 hour format you have to use HH
+
+```powershell
+$string = '2019-10-20-19-01'
+[datetime]::parseexact($string, 'yyyy-MM-dd-HH-mm', $null)
+```
