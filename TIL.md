@@ -187,3 +187,14 @@ String als Datetime parsen
 $string = '2019-10-20-19-01'
 [datetime]::parseexact($string, 'yyyy-MM-dd-HH-mm', $null)
 ```
+
+# 02.11.2021
+
+Host offline?
+
+```powershell
+if(Test-Connection -ComputerName mbs9301qsh001 -Count 1 -Quiet)
+{
+
+}
+```
