@@ -198,3 +198,11 @@ if(Test-Connection -ComputerName mbs9301qsh001 -Count 1 -Quiet)
 
 }
 ```
+
+# 04.11.2021
+
+BIOS Abfragen
+
+```powershell
+Get-WmiObject win32_bios
+```
