@@ -206,3 +206,11 @@ BIOS Abfragen
 ```powershell
 Get-WmiObject win32_bios
 ```
+
+# 05.11.2021
+
+OS in einer WinPE Session neustarten
+
+```powershell
+wpeutil reboot
+```
